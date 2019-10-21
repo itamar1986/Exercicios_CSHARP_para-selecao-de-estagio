@@ -1,0 +1,13 @@
+/*
+https://dotnetfiddle.net
+O "Dot Net Fiddle" é um site que permite você programar algoritmos com a linguagem C#, de forma on-line, assim como executá-los.
+*/
+using System;					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Digite seu nome: *");
+		Console.WriteLine("Bem vindo, {0}",Console.ReadLine());
+	}
+}

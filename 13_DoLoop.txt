@@ -1,0 +1,67 @@
+/*
+https://dotnetfiddle.net
+O "Dot Net Fiddle" é um site que permite você programar algoritmos com a linguagem C#, de forma on-line, assim como executá-los.
+*/
+using System;
+public class DoLoop
+{
+	public static void Main()
+	{
+		string myChoice;
+		do
+		{
+			// Imprime o Menu
+			Console.WriteLine("Meu Livro de Endereços\n");
+			Console.WriteLine("A - Adicionar");
+			Console.WriteLine("D - Deletar");
+			Console.WriteLine("M - Modificar");
+			Console.WriteLine("V - Visualizar");
+			Console.WriteLine("S - Sair\n");
+			Console.WriteLine("Choice (A,D,M,V,or S): ");
+			// Obtem a escolha do usuário
+			myChoice = Console.ReadLine();
+			// Trata a escolha do usuário
+			switch(myChoice)
+			{
+				case "A":
+				case "a":
+					Console.WriteLine("Você escolheu ADICIONAR.");
+					break;
+				case "D":
+				case "d":
+					Console.WriteLine("Você escolheu DELETAR.");
+					break;
+				case "M":
+				case "m":
+					Console.WriteLine("Você escolheu MODIFICAR.");
+					break;
+				case "V":
+				case "v":
+					Console.WriteLine("Você escolheu Visualizar.");
+					break;
+				case "S":
+				case "s":
+					Console.WriteLine("Tchau.");
+					break;
+			default:
+					Console.WriteLine("{0} não é uma opção válida", myChoice);
+					break;
+		}
+			// Dá uma pausa para permitir que o usuário veja o resultado
+			Console.Write("Pressione ENTER para continuar...");
+			Console.ReadLine();
+			Console.WriteLine();
+		} while (myChoice != "S" && myChoice != "s");
+	// Repete até o usuário querer sair
+	}
+}
+
+/*
+do ... while A sintaxe desta condicional é:
+do
+{
+	...
+	<expressões>;
+	...
+} while (<condicional>);
+*/

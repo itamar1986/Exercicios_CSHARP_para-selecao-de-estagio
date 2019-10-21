@@ -1,0 +1,68 @@
+/*
+https://dotnetfiddle.net
+O "Dot Net Fiddle" é um site que permite você programar algoritmos com a linguagem C#, de forma on-line, assim como executá-los.
+*/
+using System;
+public class SwitchSelect
+{
+	public static void Main()
+	{
+		string myInput;
+		int myInt;
+		// Label BEGIN
+		begin:
+		Console.Write("Favor entrar com um número entre 1 e 3: ");
+		myInput = Console.ReadLine();
+		myInt = Int32.Parse(myInput);
+		// switch com tipo inteiro
+		switch (myInt)
+		{
+			case 1:
+				Console.WriteLine("Seu número é {0}.", myInt);
+				break;
+			case 2:
+				Console.WriteLine("Seu número é {0}.", myInt);
+				break;
+			case 3:
+				Console.WriteLine("Seu número é {0}.", myInt);
+				break;
+			default:
+				Console.WriteLine("Seu número {0} não está entre 1 e 3.", myInt);
+				break;
+			}
+			// Label DECIDE
+			decide:
+				Console.Write("Digite \"continuar\" para continuar or \"sair\" para sair: ");
+			myInput = Console.ReadLine();
+			// switch com tipo string
+			switch (myInput)
+		{
+				case "continuar":
+					goto begin;
+				case "sair":
+					Console.WriteLine("Tchau.");
+					break;
+				default:
+					Console.WriteLine("Sua entrada {0} está incorreta.", myInput);
+				goto decide;
+		}
+	}
+}
+/*
+switch...case A sintaxe desta condicional é:
+switch (<variável ou propriedade>) 
+{
+	case <valor1>:
+		...
+		<expressões>
+		...
+	case <valor2>:
+		...
+		<expressões>
+		...
+	default
+		...
+		<expressões>
+		...
+}
+*/

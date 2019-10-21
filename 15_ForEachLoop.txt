@@ -1,0 +1,26 @@
+/*
+https://dotnetfiddle.net
+O "Dot Net Fiddle" é um site que permite você programar algoritmos com a linguagem C#, de forma on-line, assim como executá-los.
+*/
+using System;
+public class ForEachLoop
+{
+	public static void Main()
+	{
+		string[] names = {"Cheryl", "Joe", "Matt", "Robert"};
+		foreach (string person in names)
+		{
+			Console.WriteLine("{0} ", person);
+		}
+	}
+}
+
+/*
+for each A sintaxe desta condicional é:
+for each (<variável do tipo> in <vetor>)
+{
+	...
+	<expressões>
+	...
+}
+*/
