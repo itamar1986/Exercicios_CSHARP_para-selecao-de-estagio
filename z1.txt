@@ -1,0 +1,62 @@
+using System;
+
+public class Program
+{
+    public  void Main()
+    {
+        char[] primeiraSequencia = new char[] { 'A', 'B', 'X', 'O'};
+        char[] segundaSequencia = new char[] {'X', 'P', 'T', 'O', 'A', 'B', 'X', 'O', 'V', 'B', 'X', 'G', 'H', 'O', 'A', 'B', 'X', 'A', 'B', 'X','A','B','X','O','O','P','T','V','B'};
+		int[] index = new int[] {-1};;
+		
+        index = ComparaSequencias(primeiraSequencia, segundaSequencia);
+		if (index[0] != -1)
+		{
+			Console.WriteLine("A posição do inicio da sequencia é " + index[0].ToString());
+		}
+		else
+		{
+			Console.WriteLine("Sequencia não encontrada");
+		}
+    }
+
+     public int[] ComparaSequencias(char[] primeiraSequencia, char[] segundaSequencia)
+     {
+          // Código da solução aqui.
+		 int prox1, prox2, prox3;
+		 
+		 for ( int i = 0; i < segundaSequencia.Length; i++)
+		 {
+			 if (segundaSequencia[i] == primeiraSequencia[0])
+			 {
+				 prox1 = i + 1; 
+				 if (segundaSequencia[prox1] == primeiraSequencia[1])
+				 {
+					 prox2 = i + 2; 
+					 if (segundaSequencia[prox2] == primeiraSequencia[2])
+					 {
+						prox3 = i + 3;
+						if (segundaSequencia[prox3] == primeiraSequencia[3])
+						{
+							int[] retorno1 = new int[] {i};
+							return retorno1;
+						}
+						 else
+						 {
+							 break;
+						 }
+					 }
+					 else
+					{
+						break;
+					}
+				 }
+				 else
+				 {
+					 break;
+				 }
+			 }
+		 }
+		 int[] retorno = new int[] {-1};
+		return retorno;
+     }
+}

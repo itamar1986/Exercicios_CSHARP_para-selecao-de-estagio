@@ -1,0 +1,42 @@
+using System;
+					
+public class Program
+{
+	public void Main()
+	{
+		char[] mensagemCodificada = new char[] {'m', 'I', 'm', 'r', 'm', 'e', 'm', 'i', ' ', 'm', 'a', 'm', 'o', ' ', 'm', 'b', 'm', 'a', 'm', 'n', 'm', 'c', 'm', 'o'};
+		
+		Console.WriteLine(RetornaMensagemDecodificada(mensagemCodificada));
+	}
+	
+	public char[] RetornaMensagemDecodificada(char[] mensagemCodificada)
+	{
+		// Código da solução aqui.
+		int indexAux = 0;
+		char[] mensagemDecodificada = new char[100];
+		for (int i = 0; i < mensagemCodificada.Length; i++)
+		{
+			if (mensagemCodificada[i] == 'm')
+			{
+				if (mensagemCodificada[i + 1] == 'm')
+				{
+					mensagemDecodificada[indexAux] = mensagemCodificada[i + 1];
+					indexAux++;
+					continue;
+				}
+				else
+				{
+					continue;
+				}
+			}
+			else 
+			{
+				mensagemDecodificada[indexAux] = mensagemCodificada[i];
+				indexAux++;
+				continue;
+			}
+		}
+		return mensagemDecodificada;
+	}
+}
+
