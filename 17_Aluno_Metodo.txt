@@ -1,0 +1,35 @@
+using System;
+public class Aluno
+{
+	protected string nome;
+	public void setNome(string n)
+	{
+		nome = n;
+	}
+	public string getNome()
+	{
+		return nome;
+	}
+	protected void delNome()
+	{
+		nome = "";
+	}
+	public void deleta()
+	{
+		this.delNome();
+	}
+}
+public class Metodo
+	{
+	public static void Main()
+	{
+		// Instanciando o objeto ALUNO
+		Aluno aluno = new Aluno();
+		// Executando o método setNome para colocar o nome do Aluno
+		aluno.setNome("Itamar");
+		// Escrevendo o nome do aluno no console usando o método getNome
+		Console.WriteLine(aluno.getNome());
+		// Excluir o conteúdo do nome
+		aluno.deleta();
+	}
+}
