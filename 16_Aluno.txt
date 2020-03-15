@@ -1,0 +1,22 @@
+using System;
+public class Aluno
+{
+	string nome;
+	public static void Main()
+	{
+		// Instanciando o objeto ALUNO
+		Aluno aluno = new Aluno();
+		// Executando o método setNome para colocar o nome do Aluno
+		aluno.setNome("Itamar");
+		// Escrevendo o nome do aluno no console usando o método getNome
+		Console.WriteLine(aluno.getNome());
+	}
+	void setNome(string n)
+	{
+		nome = n;
+	}
+	string getNome()
+	{
+		return nome;
+	}
+}
